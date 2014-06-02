@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    if(message)
+      p #{message}
+    form(role="form", action="/addUser/", method="POST")
+      legend sign up
+      .form-group
+          label username
+          input.form-control#username(name = 'user[email]', type = 'text')
+          label password
+          input.form-control#password(name = 'user[password]', type = 'password')
+      button#submit.form-control submit
+    p#out

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    p welcome #{user.username}
+    h1 All Jobs
+
+    a(class = "btn btn-info", href="/newJob") Add a new job
+    button(id = "clockOut") Clock out
+    #jobs.list-group
+       
+    div#beerModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+        
+
+    script(src="/javascripts/job.js")

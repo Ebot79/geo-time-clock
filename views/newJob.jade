@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    form(role="form", action="/newJob", method="POST")
+      legend new job
+      .form-group
+          label(for = 'job[name]') name
+          input.form-control#job-name(name = 'job[name]', type = 'text')
+      button#submit submit
+    p#out
